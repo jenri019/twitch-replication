@@ -1,6 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react';
 import styled from 'styled-components'
 
+export const HeaderSearchbar = () => {
+
+  const [inputValue, setInputValue] = useState('Búsqueda...');
+
+  const handleInputChange = (e) => {
+      setInputValue(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      if(inputValue.trim().length > 0) {
+          setInputValue('');
+      }
+  }
+
+  return (
+    <StyledDiv>
+      <StyledForm action="" onSubmit={handleSubmit}>
+        <StyledInput
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+        <SubmitButton>A
+        </SubmitButton>
+      </StyledForm>
+    </StyledDiv>
+  )
+}
+
+//Setting styles to components
 const StyledDiv = styled.div`
   align-items: center;
   display: flex;
@@ -33,20 +64,3 @@ const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
 `;
-
-export const HeaderSearchbar = () => {
-  return (
-    <StyledDiv>
-      <StyledForm action="">
-        <StyledInput type="text" />
-        <SubmitButton>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <circle cx="10" cy="10" r="7" />
-            <line x1="21" y1="21" x2="15" y2="15" />
-          </svg>
-        </SubmitButton>
-      </StyledForm>
-    </StyledDiv>
-  )
-}
