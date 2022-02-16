@@ -8,6 +8,7 @@ const NavigationBar = styled.nav`
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     background-color: #18181b;
+    padding: 0 10px;
 `;
 
 export const Header = () => {

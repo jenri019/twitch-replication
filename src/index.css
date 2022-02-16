@@ -10,4 +10,5 @@ html, body {
 
 button:hover {
     cursor: pointer;
+    opacity: 0.9;
 }
