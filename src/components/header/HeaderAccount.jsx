@@ -7,6 +7,7 @@ const Container = styled.nav`
     background-color: #18181b;
     justify-content: space-around;
     align-items: center;
+    height: 50px;
 `;
 
 export const HeaderAccount = () => {

@@ -6,9 +6,9 @@ import styled from 'styled-components'
 
 const NavigationBar = styled.nav`
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     background-color: #18181b;
-    padding: 0 10px;
+    height: 50px;
 `;
 
 export const Header = () => {
