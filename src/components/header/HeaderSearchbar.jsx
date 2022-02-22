@@ -26,6 +26,7 @@ export const HeaderSearchbar = () => {
           placeholder="Búsqueda..."
         />
         <SubmitButton>
+          A
         </SubmitButton>
       </StyledForm>
     </StyledDiv>
@@ -37,23 +38,27 @@ const StyledDiv = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+  height: 50px;
 `;
 
 const StyledForm = styled.form`
   background-color: #ffffff;
-  border-radius: 5px 5px 5px 5px;
-  border: solid #ffffff;
+  width: 30rem;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 `;
 
 const StyledInput = styled.input`
   background-color: #ffffff;
   border-style: none;
   color: #777777;
+  border-radius: 5px 5px 5px 5px;
   &:focus {
     outline: none;
   }
+  width: 27rem;
+  padding: 5px;
 `;
 
 const SubmitButton = styled.button`
@@ -62,4 +67,9 @@ const SubmitButton = styled.button`
   border-style: none;
   display: flex;
   justify-content: center;
+  width: 2rem;
+  &:hover {
+    background-color: black;
+    transition: 2s;
+  }
 `;
