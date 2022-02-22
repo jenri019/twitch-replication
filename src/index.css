@@ -3,6 +3,10 @@
     --fontcolor: #efeff1;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     background-color: var(--bgcolor);
     color: var(--fontcolor);
