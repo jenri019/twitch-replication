@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledButton } from '../Button';
+import { Button } from '../Button';
 import styled from 'styled-components'
 
 const Container = styled.nav`
@@ -14,8 +14,8 @@ export const HeaderAccount = () => {
   return (
     <Container>
       <i>V</i>
-      <StyledButton >Iniciar sesión</StyledButton>
-      <StyledButton btnprimary>Registrate</StyledButton>
+      <Button btnText="Registrate"/>
+      <Button btnText="Crear cuenta" primary/>
       <i>Gs</i>
     </Container>
   )
